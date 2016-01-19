@@ -1,0 +1,158 @@
+/*滚动条颜色设置*/
+/*#Explain, .InsuranceInfo .box{*/
+    /*scrollbar-face-color:#dcdcdc;*/
+    /*scrollbar-base-color:#ff6600;*/
+    /*scrollbar-highlight-color:#dcdcdc;*/
+    /*scrollbar-3dlight-color:#dcdcdc;*/
+    /*scrollbar-darkshadow-color:#dcdcdc;*/
+    /*scrollbar-Shadow-color:#dcdcdc;*/
+    /*scrollbar-arrow-color:#666;*/
+    /*scrollbar-track-color:#f5f5f5;*/
+/*}*/
+
+#Explain::-webkit-scrollbar {
+    width: 7px;
+    background-color: #f0f0f0;
+}
+.InsuranceInfo .box::-webkit-scrollbar {
+    width: 7px;
+    background-color: #f0f0f0;
+}
+::-webkit-scrollbar-thumb {
+    background-color: red;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #cdcdcd;
+}
+::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment{width:10px;height:10px;}
+::-webkit-scrollbar-button:vertical:decrement{background:url(../img/bg.png) -29px -10px;}
+::-webkit-scrollbar-button:vertical:decrement:hover{background-position: -29px 0;}
+::-webkit-scrollbar-button:vertical:increment{background:url(../img/bg.png) -20px -10px;}
+::-webkit-scrollbar-button:vertical:increment:hover{background-position: -20px 0;}
+::-webkit-scrollbar-thumb:vertical{height:100px;background:#d0d0d0;}
+::-webkit-scrollbar-thumb:vertical:hover{background:#aaaaab;}
+::-webkit-scrollbar-thumb:horizontal{width:80px;height:10px;background-color:#ccc;}
+
+
+/*scrollbar over*/
+
+/*公共部分*/
+.PayRed{color:#ff8231}
+.PayBlue{color:#0032a8; font-weight:bold;}
+.borderLine{border-top:1px solid #8fadfc;}
+h5{background:url(../img/bxnanme.png) no-repeat; height:28px;}
+
+/*头部*/
+#header{border-bottom:2px solid #ecf1fe;}
+#header .headermain{width:1200px; height:45px; margin:30px auto; background:url(../img/logo.png) no-repeat left center; position:relative; }
+#header .headermain .headerinfo{position:absolute; background:url(../img/bg.png) no-repeat 74px -281px; right:0; top:26%; padding-right:138px;}
+#header .headerA{border-right:1px solid #003693; padding:0 10px 0 20px; background:url(../img/bg.png) no-repeat 0px -230px;}
+/*线路信息*/
+#write{width:1200px; margin:0 auto; color:#666; font-size:12px; margin-bottom:50px;}
+#write .header{ height:76px; background:url(../img/head.png); margin:12px 0px;}
+#write-main .clearBtn{background-color:#ff8231; color:#fff; padding:0px 27px; cursor:pointer; margin-right:10px; width:auto; height:auto; line-height: 20px;}
+#write-main, #write-right{float:left;}
+#write-main{width:956px; border:2px solid #ecf1fe; margin-right:15px;}
+#write-main .share{padding-left:46px; color:#868686}
+#write-main h2{background-color:#ecf1fe; line-height: 34px; font-size:16px; font-weight: bold; padding-left:46px;}
+.share .fontcolor{color:#666; font-weight: bold;}
+.share .fontdate{margin-left:55px;}
+.share p{margin-top:10px;}
+#write-main .LineInfo, #write-main .InsuranceInfoMain, #write-main .ContactInfo, #write-main .TouristInfo, #write-main .DiscountInfo, #write-main .InvoiceInfo, #write-main .TouristSurvey{padding-bottom: 40px;}
+.LineInfo ul{margin-top:12px}
+.LineInfo li{float:left; width:906px; padding-left:59px; overflow:hidden; margin-top:5px;}
+.LineInfo .sharediv{float:right; width:204px; margin-right:42px;}
+.LineInfo .sharediv .PayRed{margin-left:10px; margin-right:30px;}
+.LineInfo .sharediv a, .LineInfo .sharediv b{border:1px solid #e5e5e5; width:24px; line-height: 18px; display:inline-block; text-align: center; color:#666;}
+.LineInfo .sharediv b{font-weight:500; color:#868686;}
+b.plus, b.cut{cursor:pointer;}
+.LineInfo .tip{width:882px; margin-left:36px; margin-top:16px; background-color:#ecf1fe; padding:10px 0px;}
+.tip h3{font-weight: bold; margin-left:10px;}
+.tip p{margin-left:22px; margin-top:5px;}
+span.PayRed span{display:inline-block; width:60px; }
+#write-right .count{float:right; background-color:#f7f7f7; padding-left:5px;}
+#write-right p.PayRed span{background-color:#f7f7f7;}
+#write-right .write-rightSpanMain{padding-right:5px;}
+#write-right p.PayRed{background:url(../img/line.png) center repeat-x;}
+
+/*保险信息*/
+.InsuranceInfo .box{width:864px; width:864px\0; height:130px; padding:10px; border:1px solid #e2e9fe; margin:0 auto; overflow-y:auto; }
+.InsuranceInfo .InsuranceInfoMain{position:relative;}
+.InsuranceInfoMain .InsuranceInfoFloat{position:absolute; top:30px; left:-9999px; padding:10px; padding-left:16px; background:url(../img/bg2.png) 0px 0px no-repeat; width:227px; height:185px; overflow-y:auto; line-height: 17px;}
+.box p{display:inline-block; vertical-align: middle;}
+.box .Info2{width:480px; float:right;}
+.Info2 span{width:235px; display:inline-block; text-align: right;}
+.Info2 span:first-child{width:245px;}
+.box s{background:url(../img/bg.png); width:12px; height:12px; display:inline-block; vertical-align: middle;}
+.box .current{background-position:0px -17px;}
+
+/*联系人信息*/
+input[type=text]{padding:0;}
+.ContactInfo .bgPosition1{background-position:0 -34px; }
+.share .divborderleft{border-left:1px solid #dcdcdc;}
+.share input{border:1px solid #dcdcdc; border-left:none; padding-left:2px; width:152px; height:22px; line-height: 22px;}
+.share .typewidth1{width:118px;}
+
+
+/*出游人信息*/
+.TouristInfo input, .TouristInfo .typediv{float:left;}
+.TouristInfo .TouristInfodiv1{margin-bottom:10px;}
+.TouristInfo .clearBtn{margin-left:3px;}
+.TouristInfo .typediv{position:relative; border:1px solid #dcdcdc; padding-left:2px; width:152px; height:22px; line-height: 22px; border-left:none;}
+.typediv dd{position:absolute; top:21px; left:0px; display:none; border:1px solid #dcdcdc; border-top:none; background-color: #fff; z-index: 1;}
+/*.TouristInfo .typediv:hover dd{display:block; z-index: 1}*/
+.typediv span{position:relative; display:block; line-height: 20px; }
+.typediv s{background:url(../img/bg.png) 0 -34px; width:9px; height:5px; display:inline-block; position:absolute; right:10px; top:40%;}
+.typediv p{width:150px; border-bottom:1px dashed #dcdcdc; margin-top:0; background-color:#eee;}
+.typediv p:last-child{border-bottom:none; line-height: 20px;}
+.typediv p:hover{background-color:#ff8231; color:#fff;}
+.TouristInfo .bgPosition2{background-position:0 -67px;}
+.share .bold{font-weight:bold; vertical-align:middle;}
+
+
+/*优惠信息*/
+#Confirm{padding:0px 13px; background-color:#ff8231; color:#fff;  width:auto; height:25px; cursor:pointer;}
+.share .DiscountInfoinputp{margin-bottom:10px;}
+.DiscountInfoinputp span, .DiscountInfoinputp input{float:left;}
+.DiscountInfoinputp span{line-height: 25px;}
+.DiscountInfoinputp input{border:1px solid #ff8231; height:25px; width:174px;}
+.share .bgPosition3{background-position:0 -100px;}
+
+
+/*发票信息*/
+.InvoiceInfo .Invoice{padding-left:46px; color:#868686;}
+.Invoice p{margin-top:10px;}
+.InvoiceInfo input{vertical-align: middle; margin-right:10px; margin-top:-2px; cursor:default;}
+.InvoiceInfoInput .InvoiceInfoleft18{margin-left:18px;}
+.InvoiceInfoInput input{width:196px; color:#868686;}
+.InvoiceInfoInput input.InvoiceInfoleft18, .InvoiceInfoInput .pho{border:1px solid #dcdcdc; height:22px; padding-left:2px; line-height: 22px; cursor:auto;}
+.InvoiceInfoInput input.InvoiceInfoleft16{ border:1px solid #dcdcdc; height:22px; padding-left:2px; line-height: 22px; cursor:auto; margin-left:13px;}
+.InvoiceInfoInput p label{width:60px; display:inline-block;}
+ .InvoiceInfoInput .qh{width:54px; margin-right:2px;}
+ .InvoiceInfoInput .pho{margin-left:2px; margin-right:2px; width:133px;}
+ .InvoiceInfoInput .InvoiceInfop1, .InvoiceInfoInput .InvoiceInfop2{margin-top:0px;}
+ .Invoice .InvoiceInfoInput{display:none;}
+
+/*出游人概况*/
+.TouristSurvey .Tourist{padding-left:46px; color:#868686;}
+.Tourist dd, .Tourist p{margin-top:10px;}
+.Tourist b{color:#666;}
+.Tourist span{margin-left:22px;}
+.Tourist input{vertical-align:middle; cursor:default;}
+.Tourist em{vertical-align:middle;}
+.Tourist dd a{width:276px; height:38px; display:block; margin:40px auto 40px auto; background:url(../img/bg.png) -324px 0px;}
+
+/*费用说明*/
+#Explain{padding:28px; padding-top:0px; border:1px solid #dcdcdc; height:430px; width:863px; overflow-y:auto; }
+#Explain h2{background-color:#fff; padding-top:28px; border-bottom: 1px solid #8fadfc; padding-left: 0; color:#666;}
+#Explain .colorshen{font-weight: bold; color:#666;}
+.ExplainPie p{line-height: 20px;}
+
+
+/*右侧栏*/
+#write-right{width:228px; background-color: #f7f7f7; margin-top:-2px;}
+#write-right h2{color:#0032a8; font-weight: bold; padding:10px;}
+#write-right div{margin:10px;}
+#write-right div i{color:#d8e4fb;}
+#write-right dd{font-size:16px; background-color: #e1e6f7; padding:10px;}
+#write-right dd span{float:right;}

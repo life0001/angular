@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>订单支付--AngularJS</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" href="css/base.css"/>
+	<link rel="stylesheet" href="css/CheckFill.css"/>
+	<script src="script/jquery.1.9.1.js"></script>
+	<script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
+	<script src="script/angular.min.js"></script>
+	<script src="script/CheckFill.js"></script>
+</head>
+<body ng-app="write">
+<div id="header">
+	<p class="headermain">
+		<span class="headerinfo"><a class="headerA PayBlue" href="http://www.uddtrip.com/">首页</a></span>
+	</p>
+</div>
+	<div id="write" ng-controller="fill">
+		<p class="header"></p>
+		<div id="write-box" class="clearfix">
+			<hr class="borderLine" width="956px" style="text-align: left;">
+			<div id="write-main">
+				<!--线路信息-->
+				<div class="LineInfo">
+					<h2>线路信息</h2>
+					<div class="share">
+						<p>线路名称： <span class="fontcolor"> &lt; 厦门当地游_曾厝垵+胡里山炮台+鼓浪屿大巴4日游>自由闲逛，位于厦门最美的环岛路上</span></p>
+						<p>出发城市： 厦门</p>
+						<p>出游日期： <span class="Travel-date">2015-11-17</span><span class="fontdate">回团日期： <span class="Return-date">2015-11-20 </span></span></p>
+						<ul class="clearfix">
+							<div class="sharediv">每人<span class="PayRed"><span ng-bind="price.p1+'元'"></span></span><a href="javascript:void(0)"style="border-right:0px" ng-click="price.numCut()" class="cut">-</a><b style="border-right:0px" ng-bind="price.num1"></b><a href="javascript:void(0)" ng-click="price.numCount()" class="plus">+</a></div>出游人数：
+							成人
+							<li>
+								<div class="sharediv">每人<span class="PayRed"><span ng-bind="price.p2+'元'"></span></span><a href="javascript:void(0)"style="border-right:0px" ng-click="price.numCut2()" class="cut">-</a><b style="border-right:0px" ng-bind="price.num2">1</b><a href="javascript:void(0)" ng-click="price.numCount2()" class="plus">+</a></div>
+								&nbsp;儿童
+							</li>
+							<li>
+								<div class="sharediv">每人<span class="PayRed"><span ng-bind="price.p3+'元'"></span></span><a href="javascript:void(0)"style="border-right:0px" ng-click="price.numCut3()" class="cut">-</a><b style="border-right:0px" ng-bind="price.num3">1</b><a href="javascript:void(0)" ng-click="price.numCount3()" class="plus">+</a></div>
+								&nbsp;单房差
+							</li>
+						</ul>
+					</div>
+					<div class="tip">
+						<h3>温馨提示</h3>
+						<p>单房差：本产品是按“双人共住一间房”核算的单人价格，所以当出行人数为奇数或者有住一间房时，需要补齐另外半间房的费用。</p>
+					</div>
+				</div>
+				<!--保险信息-->
+				<div class="InsuranceInfo">
+					<h2 class="borderLine">保险信息</h2>
+					<div class="InsuranceInfoMain">
+						<h5></h5>
+						<div class="box">
+							<dd>
+								<p class="Info2"><span>1-10天</span><span>10元 </span></p>
+								<s class="current"></s>
+								<p class="PayBlue">新华国内保险 经典型（1-10天）</p>
+							</dd>
+							<dd>
+								<p class="Info2"><span>4-7天</span><span>30元 </span></p>
+								<s></s>
+								<p>史带国内乐游神州保险 经典型（4-7天） </p>
+							</dd>
+							<dd>
+								<p class="Info2"><span>4-7天</span><span>50元 </span></p>
+								<s></s>
+								<p>史带国内乐游神州保险 经典型（4-7天） </p>
+							</dd>
+							<dd>
+								<p class="Info2"><span>4-7天</span><span>50元 </span></p>
+								<s></s>
+								<p>史带国内乐游神州保险 经典型（4-7天） </p>
+							</dd>
+							<dd>
+								<p class="Info2"><span>4-7天</span><span>50元 </span></p>
+								<s></s>
+								<p>史带国内乐游神州保险 经典型（4-7天） </p>
+							</dd>
+							<dd>
+								<p class="Info2"><span>4-7天</span><span>50元 </span></p>
+								<s></s>
+								<p>史带国内乐游神州保险 经典型（4-7天） </p>
+							</dd>
+							<dd>
+								<p class="Info2"><span>4-7天</span><span>50元 </span></p>
+								<s></s>
+								<p>史带国内乐游神州保险 经典型（4-7天） </p>
+							</dd>
+							<dd>
+								<p class="Info2"><span>4-7天</span><span>50元 </span></p>
+								<s></s>
+								<p>史带国内乐游神州保险 经典型（4-7天） </p>
+							</dd>
+							<dd>
+								<p class="Info2"><span>4-7天</span><span>50元 </span></p>
+								<s></s>
+								<p>史带国内乐游神州保险 经典型（4-7天） </p>
+							</dd>
+							<dd>
+								<p class="Info2"><span>4-7天</span><span>50元 </span></p>
+								<s></s>
+								<p>史带国内乐游神州保险 经典型（4-7天） </p>
+							</dd>
+							<dd>
+								<p class="Info2"><span>4-7天</span><span>50元 </span></p>
+								<s></s>
+								<p>史带国内乐游神州保险 经典型（4-7天） </p>
+							</dd>
+							<!--说明1-->
+							<div class="InsuranceInfoFloat">
+								<p>意外事故，残疾及烧伤 100,000</p>
+								<p>突发急性病身故（含猝死）30,000</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+							</div>
+							<!--说明2-->
+							<div class="InsuranceInfoFloat">
+								<p>意外事故，残疾及烧伤 100,000</p>
+								<p>突发急性病身故（含猝死）30,000</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+							</div>
+							<!--说明3-->
+							<div class="InsuranceInfoFloat">
+								<p>意外事故，残疾及烧伤 100,000</p>
+								<p>突发急性病身故（含猝死）30,000</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+							</div>
+							<!--说明4-->
+							<div class="InsuranceInfoFloat">
+								<p>意外事故，残疾及烧伤 100,000</p>
+								<p>突发急性病身故（含猝死）30,000</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+							</div>
+							<!--说明5-->
+							<div class="InsuranceInfoFloat">
+								<p>意外事故，残疾及烧伤 100,000</p>
+								<p>突发急性病身故（含猝死）30,000</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+							</div>
+							<!--说明6-->
+							<div class="InsuranceInfoFloat">
+								<p>意外事故，残疾及烧伤 100,000</p>
+								<p>突发急性病身故（含猝死）30,000</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+							</div>
+							<!--说明7-->
+							<div class="InsuranceInfoFloat">
+								<p>意外事故，残疾及烧伤 100,000</p>
+								<p>突发急性病身故（含猝死）30,000</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+							</div>
+							<!--说明8-->
+							<div class="InsuranceInfoFloat">
+								<p>意外事故，残疾及烧伤 100,000</p>
+								<p>突发急性病身故（含猝死）30,000</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+							</div>
+							<!--说明9-->
+							<div class="InsuranceInfoFloat">
+								<p>意外事故，残疾及烧伤 100,000</p>
+								<p>突发急性病身故（含猝死）30,000</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+							</div>
+							<!--说明10-->
+							<div class="InsuranceInfoFloat">
+								<p>意外事故，残疾及烧伤 100,000</p>
+								<p>突发急性病身故（含猝死）30,000</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+							</div>
+							<!--说明11-->
+							<div class="InsuranceInfoFloat">
+								<p>意外事故，残疾及烧伤 100,000</p>
+								<p>突发急性病身故（含猝死）30,000</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+								<p>所以当出行人数为奇数或者有</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--联系人信息-->
+				<div class="ContactInfo">
+					<h2 class="borderLine">联系人信息</h2>
+					<div class="share">
+						<h5 class="bgPosition1"></h5>
+						<div class="divborderleft">
+							<input class="typewidth1" type="text" placeholder="姓名"><input class="typewidth2" type="text"><input class="typewidth2" type="text">
+							<input type="button" class="clearBtn ContactInfo_btn1" value="清空">
+						</div>
+					</div>
+				</div>
+				<!--出游人信息-->
+				<div class="TouristInfo">
+					<h2 class="borderLine">出游人信息</h2>
+					<div class="share">
+						<h5 class="bgPosition2"></h5>
+						<div class="TouristInfodiv1 clearfix divborderleft">
+							<input class="typewidth1" type="text" placeholder="姓名">
+							<div class="typediv">
+								<span class="id-card"><span>身份证</span><s></s></span>
+								<dd><p>身份证</p><p>驾驶证</p></dd>
+							</div>
+							<input class="typewidth2" type="text">
+							<input class="typewidth2" type="text">
+							<input type="button" class="clearBtn" value="清空">
+							<span class="bold">出游人 <span>1</span></span>
+						</div>
+					</div>
+				</div>
+				<!--优惠信息-->
+				<div class="DiscountInfo">
+					<h2 class="borderLine">优惠信息</h2>
+					<div class="share">
+						<h5 class="bgPosition3"></h5>
+						<p class="DiscountInfoinputp clearfix"><span>如果您有代金券码请输入：</span><input type="text"><input type="button" id="Confirm" value="确定"></p>
+						<p>每张订单限用一张优惠券。优惠券适用的产品详见<span class="PayBlue">会员中心-我的资产-优惠券</span></p>
+					</div>
+				</div>
+				<!--发票信息-->
+				<div class="InvoiceInfo">
+					<h2 class="borderLine">发票信息</h2>
+					<div class="Invoice">
+						<p><input type="radio" name="Invoice" checked="checked" id="infol"/><label for="infol">不需要发票信息</label></p>
+						<p><input type="radio" name="Invoice" id="infol1" /><label for="infol1">需要发票信息</label></p>
+						<div class="InvoiceInfoInput">
+							<p class="InvoiceInfop PayBlue">您的发票将于您出游归来后5个工作日内开具并由快递寄出，请注意查收</p>
+							<p class="InvoiceInfop1"><label>发票金额：</label><span class="InvoiceInfoleft18">￥<span class="Invoiceprice">738</span>（保险发票￥<em>10</em>，自动开具保险专用发票，抵用券、旅游券支付金额不开具发票）</span></p>
+							<p class="InvoiceInfop2"><label>发票明细：</label><span class="InvoiceInfoleft18">旅游费</label></span></p>
+							<p><label>发票抬头：</label><input class="InvoiceInfoleft18" type="text" placeholder="请输入发票抬头"></p>
+							<p>配送信息：</p>
+							<p><i class="PayBlue">*</i><label>收件人：</label><input class="InvoiceInfoleft16" type="text" placeholder="请输入收件人"></p>
+							<p><i class="PayBlue">*</i><label>邮寄地址：</label><input class="InvoiceInfoleft16" type="text" placeholder="请输入邮寄地址"></p>
+							<p><i class="PayBlue">*</i><label>邮政编码： </label><input class="InvoiceInfoleft16" type="text" placeholder="请输入邮政编码"></p>
+							<p><i class="PayBlue">*</i><label>手机： </label><input class="InvoiceInfoleft16" type="text" placeholder="请输入手机"></p>
+							<p><label>固定电话： </label><input class="InvoiceInfoleft18 qh" type="text" placeholder="区号">-<input class="pho" type="text" placeholder="电话号码">(选填)</p>
+						</div>
+					</div>
+				</div>
+				<!--出游人概况-->
+				<div class="TouristSurvey">
+					<h2 class="borderLine">出游人概况</h2>
+					<div class="Tourist">
+						<dd>
+							<b>我们当中有</b>
+							<span><input type="checkbox"><em> 1.  孕妇</em></span>
+							<span><input type="checkbox"><em> 2. 75周岁以上老人</em></span>
+							<span><input type="checkbox"><em> 3.有外籍友人（含港澳台） </em></span>
+							<span><input type="checkbox"><em> 4.我们都是未成年人</em></span>
+							<p class="PayRed"><input type="checkbox"> <em>我已认真阅读并同意以下条款（费用说明、预订须知、投保人告知声明、合同范本等）</em></p>
+							<a href="javascript:void(0);" class="Submit"></a>
+						</dd>
+						<!--费用说明-->
+						<div id="Explain">
+							<div class="ExplainPie">
+								<h2>费用说明</h2>
+								<p class="colorshen">出游费用包含</p>
+								<br/>
+								<p class="colorshen">出游费不包含</p>
+							</div>
+							<div class="ExplainPie">
+								<h2>预定须知</h2>
+								<p>
+									在行程前解除合同的，必要的费用扣除标准为：<br/>
+									行程前 6 日至 4 日，收取旅游费用的 10 %。<br/>
+									行程前 6 日至 4 日，收取旅游费用的 10 %。<br/>
+									行程前 6 日至 4 日，收取旅游费用的 100 %。<br/>
+								</p>
+							</div>
+							<div class="ExplainPie">
+								<h2>投保人告知声明</h2>
+								<p>太平洋预订取消险：1. 本投保人兹申明以上述各项内容填写属实。本投保人已认真阅读并正确理解《中国太平洋财产保险股份有限公司旅程预订取消保
+									险（B 款）条款》及相关附加条款的各项内容，尤其是有关免除责任条款。2.根据《中华人民共和国合同法》第十一条规定，数据电文是合法的表现形
+									式。本人接收以中国太平洋财产保险股份有限公司提供的电子保单作为本投保书成立的合法有效凭证，具有完全法律效力。3.本人同意提供给中国太平
+									洋财产保险股份有限公司（指中国太平洋财产保险股份有限公司及其直接或间接的控股的公司）的信息，及本人享受中国太平洋财产保险股份有限公司
+									服务产生的信息（包括本单证签署之前提供和产生的），可用于中国太平洋财产保险股份有限公司及因服务必要而委托第三方为本人提供服务及推荐产
+									品，法律禁止的除外。中国太平洋财产保险股份有限公司及其委托的第三方对上述信息负有保密义务。本条款自本保险合同签署时生效，具有独立的法
+									律效力，不受合同成立与否及效力状态变化的影响。</p>
+							</div>
+							<div class="ExplainPie">
+								<h2>预定限制</h2>
+								<p>1. 70周岁（含）以上老年人预订出游，须与我司签订《健康证明表》，并有18周岁以上家属或朋友（因服务能力所限无法接待及限制接待的人除外）全
+									程陪同出游。<br/>
+									2. 本产品不接受81周岁以上(含)的客人单独报名出游，敬请谅解！<br/>
+									3. 本产品不接受18周岁以下(含)的客人单独报名出游，敬请谅解！<br/>
+									4. 本团体报价是按照2成人入住1间房计算的价格，本产品不接受拼房,如您的订单产生单房，请在预订后续页面中选择单 单人房差可选项。<br/>
+									5. 本产品不接受非大陆籍客人预订，敬请谅解！</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--基本团费---下面人数和价格不用填，自动加载-->
+			<div id="write-right">
+				<h2 class="borderLine">基本团费</h2>
+				<div>
+					<p>成人</p>
+					<p class="PayRed"><span class="count" ng-bind="price.num1*price.p1+'元'"></span><span class="write-rightSpanMain"><span ng-bind="price.num1"></span>x<span ng-bind="price.p1"></span></span></p>
+				</div>
+				<div>
+					<p>儿童</p>
+					<p class="PayRed"><span class="count" ng-bind="price.num2*price.p2+'元'"></span><span class="write-rightSpanMain"><span ng-bind="price.num2"></span>x<span ng-bind="price.p2"></span></span></p>
+				</div>
+				<div>
+					<p>单房差</p>
+					<p class="PayRed"><span class="count" ng-bind="price.num3*price.p3+'元'"></span><span class="write-rightSpanMain"><span ng-bind="price.num3"></span>x<span ng-bind="price.p3"></span></span></p>
+				</div>
+				<div>
+					<p>保险</p>
+					<p class="PayRed"><span class="count">10元</span><span class="jiage write-rightSpanMain">10元</span></p>
+				</div>
+				<dd><span class="PayRed" ng-bind="'￥'+price.sum()"></span>费用总计</dd>
+			</div>
+		</div>
+	</div>
+<script src="script/1.js"></script>
+</body>
+</html>
